@@ -1,0 +1,18 @@
+@import './colors';
+
+.info {
+  position: relative;
+  float: left;
+  width: 20vw;
+  border-left: 4px solid $background-blue;
+  padding: 30px 10px;
+  opacity: 1;
+  transition: opacity 0.4s, margin-left 0.5s, margin-top 0.2s, padding 0.2s;
+  margin-left: 0;
+
+  &.hidden {
+    opacity: 0;
+    margin-left: 20px;
+    padding: 10px 10px;
+  }
+}
