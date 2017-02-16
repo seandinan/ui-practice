@@ -2,8 +2,8 @@ import React from 'react';
 
 import styles from './styles/HoverContext.scss';
 
-import InfoContainer from './../components/InfoContainer';
-import InfoTrigger from './../components/InfoTrigger';
+import InfoContainer from './../components/hovercontext/InfoContainer';
+import InfoTrigger from './../components/hovercontext/InfoTrigger';
 
 class HoverContext extends React.Component {
 	constructor(props){

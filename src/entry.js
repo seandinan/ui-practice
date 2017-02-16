@@ -4,6 +4,7 @@ import { Router, IndexRoute, Route, browserHistory, Link, IndexRedirect } from '
 
 import Home from './pages/Home';
 import HoverContext from './pages/HoverContext';
+import MagnifyImage from './pages/MagnifyImage';
 
 const container = (props) => (
 	<div>
@@ -26,6 +27,7 @@ const Routing = () => (
 		<Route path="/" component={container}>
 			<IndexRoute component={Home} />
 			<Route path="/HoverContext" component={HoverContext} />
+			<Route path="/MagnifyImage" component={MagnifyImage} />
 		</Route>
 
 		<Route path="*" component={error} />
