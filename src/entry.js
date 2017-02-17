@@ -5,6 +5,7 @@ import { Router, IndexRoute, Route, browserHistory, Link, IndexRedirect } from '
 import Home from './pages/Home';
 import HoverContext from './pages/HoverContext';
 import MagnifyImage from './pages/MagnifyImage';
+import TimePicker from './pages/TimePicker';
 
 const container = (props) => (
 	<div>
@@ -28,6 +29,7 @@ const Routing = () => (
 			<IndexRoute component={Home} />
 			<Route path="/HoverContext" component={HoverContext} />
 			<Route path="/MagnifyImage" component={MagnifyImage} />
+			<Route path="/TimePicker" component={TimePicker} />
 		</Route>
 
 		<Route path="*" component={error} />

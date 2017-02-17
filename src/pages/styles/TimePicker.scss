@@ -1,0 +1,55 @@
+@import './../../constants/colors';
+
+$fade-time: 0.5s;
+
+.container {
+  padding: 5%;
+  box-sizing: border-box;
+  background-color: $sky-blue;
+  height: calc(100vh - 55px);
+  transition: background-color $fade-time;
+
+  &.night {
+    background-color: darken($sky-blue, 40%);
+  }
+
+  h1 {
+
+    a {
+      color: $dark-purple;
+
+      &:visited {
+        color: $dark-purple;
+      }
+    }
+  }
+
+  .componentHolder {
+    width: 100%;
+    height: 60%;
+    font-size: 50px;
+    display: flex;
+    margin-top: 5%;
+    flex-flow: column;
+    align-items: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    .time {
+     color: white;
+
+    }
+
+    .dayHalf {
+      color: $yellow;
+      transition: color $fade-time;
+
+      &.night {
+        color: lighten($blue, 20%);
+      }
+    }
+  }
+
+}

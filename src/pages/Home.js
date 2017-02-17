@@ -6,6 +6,7 @@ const Home = (props) => (
 		<ul>
 			<li><Link to="/HoverContext">HoverContext</Link></li>
 			<li><Link to="/MagnifyImage">MagnifyImage</Link></li>
+			<li><Link to="/TimePicker">TimePicker</Link></li>
 		</ul>
 	</div>
 );

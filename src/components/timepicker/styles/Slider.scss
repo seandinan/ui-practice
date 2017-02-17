@@ -1,0 +1,38 @@
+@import './../../../constants/colors';
+
+$transition-time: 0.15s;
+
+.sliderContainer {
+  position: relative;
+  padding: 0 30px;
+}
+
+.slider {
+  height: 200px;
+  width: 0;
+  border-left: 2px solid white;
+
+  .marker {
+    position: absolute;
+    left: 21px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0px 3px 3px hsla(180, 40%, 0%, 0.3);
+    transition:
+      background-color $transition-time,
+      height $transition-time,
+      width $transition-time,
+      left $transition-time,
+      box-shadow $transition-time;
+
+    &.active {
+      background-color: lighten($blue, 20%);
+      box-shadow: 2px 5px 5px hsla(180, 40%, 0%, 0.2);
+      height: 25px;
+      width: 25px;
+      left: 18px;
+    }
+  }
+}
