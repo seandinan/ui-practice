@@ -1,0 +1,33 @@
+
+.container {
+  .header {
+    width: 100%;
+    border: 1px solid pink;
+  }
+
+  .listContainer {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    overflow: auto;
+    border: 2px solid crimson;;
+    transition: 1s;
+
+    .list {
+      width: 100%;
+    }
+
+    &.collapsed {
+      height: 0;
+      overflow: hidden;
+    }
+  }
+}
+
+
+.listItem {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  border: 1px solid hsl(0, 0%, 90%);
+}

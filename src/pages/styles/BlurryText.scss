@@ -1,0 +1,128 @@
+@import './../../constants/colors';
+$lineLength: 15px;
+$lineStyle: 2px solid white;
+$motionDuration: 3s;
+
+.container {
+  padding: 2% 0;
+  height: 93%;
+  box-sizing: border-box;
+  background-color: $grass-green;
+
+  h1 {
+    color: white;
+    margin-left: 5%;
+
+    a {
+      color: hsl(220, 60%, 40%);
+
+      &:visited {
+        color: hsl(220, 60%, 40%);
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    padding: 2%;
+    background-color: $grass-green;
+  }
+
+  @keyframes textMotion {
+    // Moves left while the box moves right
+    0% {left: 0px;}
+    50% {left: -175px;}
+    100% {left: 0px;}
+  }
+
+  @keyframes boxMotion {
+    0% {left: 0px; box-shadow: -5px 5px 10px hsla(90, 60%, 20%, 0.25);}
+    50% {left: 175px; box-shadow: 5px 5px 10px hsla(90, 60%, 20%, 0.25);}
+    100% {left: 0px; box-shadow: -5px 5px 10px hsla(90, 60%, 20%, 0.25);}
+  }
+
+  .textContainer {
+    position: relative;
+  }
+
+  .text {
+    font-size: 40px;
+    color: white;
+    margin: 5px 10px;
+  }
+
+  .blurredText {
+    @extend .text;
+    filter: blur(2px);
+  }
+
+  .radarBox {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    height: 55px;
+    width: 70px;
+    background-color: $grass-green;
+    z-index: 1;
+    overflow: hidden;
+
+    animation-name: boxMotion;
+    animation-duration: $motionDuration;
+    animation-iteration-count: infinite;
+
+    .text {
+      position: absolute;
+      left: 0;
+      top: -1px;
+      width: 250px;
+      height: 60px;
+
+      animation-name: textMotion;
+      animation-duration: $motionDuration;
+      animation-iteration-count: infinite;
+    }
+
+    .cornerBox {
+      height: $lineLength;
+      width: $lineLength;
+      position: absolute;
+    }
+
+    .topLeft {
+      @extend .cornerBox;
+      top: 0;
+      left: 0;
+      border-top: $lineStyle;
+      border-left: $lineStyle;
+    }
+
+    .topRight {
+      @extend .cornerBox;
+      top: 0;
+      right: 0;
+      border-top: $lineStyle;
+      border-right: $lineStyle;
+    }
+
+    .bottomLeft {
+      @extend .cornerBox;
+      bottom: 0;
+      left: 0;
+      border-bottom: $lineStyle;
+      border-left: $lineStyle;
+    }
+
+    .bottomRight {
+      @extend .cornerBox;
+      bottom: 0;
+      right: 0;
+      border-bottom: $lineStyle;
+      border-right: $lineStyle;
+    }
+  }
+
+
+
+}

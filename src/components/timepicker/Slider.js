@@ -4,15 +4,20 @@ import classNames from 'classnames/bind';
 import styles from './styles/Slider.scss';
 let cx = classNames.bind(styles);
 
-class Slider extends React.Component {
-	constructor(props){
-		super(props);
-		this.state = {
-			value: 0,
-			min: this.props.min || 0,
-			max: this.props.max || 100,
-			isChangeActive: false,
-		}
+export default class Slider extends React.Component {
+	state = {
+		value: 0,
+		min: this.props.min || 0,
+		max: this.props.max || 100,
+		isChangeActive: false,
+	}
+
+	static propTypes = {
+		name: React.PropTypes.string.isRequired,
+		lockedValues: React.PropTypes.arrayOf(React.PropTypes.number),
+		min: React.PropTypes.number,
+		max: React.PropTypes.number,
+		onChange: React.PropTypes.func.isRequired,
 	}
 
 	handleMotion = (event) => {
@@ -62,13 +67,3 @@ class Slider extends React.Component {
 		)
 	}
 }
-
-Slider.propTypes = {
-	name: React.PropTypes.string.isRequired,
-	lockedValues: React.PropTypes.arrayOf(React.PropTypes.number),
-	min: React.PropTypes.number,
-	max: React.PropTypes.number,
-	onChange: React.PropTypes.func.isRequired,
-}
-
-export default Slider;

@@ -17,14 +17,11 @@ for (let i = 0; i < 60; i++){
 	else time.minute.push(`${i}`);
 }
 
-class TimePicker extends React.Component {
-	constructor(props){
-		super(props);
-		this.state = {
-			hour: time.hour[0],
-			minute: time.minute[0],
-			dayHalf: time.dayHalf[0],
-		};
+export default class TimePicker extends React.Component {
+	state = {
+		hour: time.hour[0],
+		minute: time.minute[0],
+		dayHalf: time.dayHalf[0],
 	}
 
 	handleChange = (value, name) => {
@@ -71,5 +68,3 @@ class TimePicker extends React.Component {
 		</div>
 	}
 }
-
-export default TimePicker;
