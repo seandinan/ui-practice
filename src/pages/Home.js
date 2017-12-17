@@ -12,6 +12,7 @@ const Home = (props) => (
 			<li><Link to="/LoginReveal">Login Reveal</Link></li>
 			<li><Link to="/ListRevealer">List Revealer</Link></li>
 			<li><Link to="/SliderIconHover">Slider Icon Hover</Link></li>
+			<li><Link to="/DonutChartExpandingData">Donut Chart</Link></li>
 		</ul>
 	</div>
 );

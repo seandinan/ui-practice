@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, IndexRoute, Route, browserHistory, Link, IndexRedirect } from 'react-router';
+import DonutChartExpandingData from './pages/DonutChartExpandingData';
 
 import Home from './pages/Home';
 import HoverContext from './pages/HoverContext';
@@ -42,6 +43,7 @@ const Routing = () => (
 			<Route path="/ListRevealer" component={ListRevealer} />
 			<Route path="/LineLoader" component={LineLoader} />
 			<Route path="/SliderIconHover" component={SliderIconHover} />
+			<Route path="/DonutChartExpandingData" component={DonutChartExpandingData} />
 		</Route>
 
 		<Route path="*" component={error} />

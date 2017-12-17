@@ -54,7 +54,7 @@ const Ball = styled.div`
 	transition: left ${TRANSITION_RATE};
 `;
 
-class BlurryText extends React.Component {
+class SliderIconHover extends React.Component {
 	constructor(props){
 		super(props);
 
@@ -87,4 +87,4 @@ class BlurryText extends React.Component {
 
 }
 
-export default BlurryText;
+export default SliderIconHover;
