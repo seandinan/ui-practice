@@ -7,7 +7,7 @@ const Container = styled.div`
   padding: 2% 0;
   height: 93%;
   box-sizing: border-box;
-  background-color: hsl(180, 47%, 63%);
+  background-color: hsl(180, 47%, 97%);
 
   h1 {
     color: white;
