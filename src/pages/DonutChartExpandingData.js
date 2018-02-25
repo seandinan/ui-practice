@@ -53,10 +53,12 @@ class DonutChartExpandingData extends React.Component {
 			<h1>Inspired by <a target="_blank" href="https://codemyui.com/pie-chart-data-click/">this</a></h1>
 			<Content>
 				<DonutChart height={0.5 * this.state.windowHeight} width={0.5 * this.state.windowWidth}>
-					<DonutPercentage color={Styles.blue} name="Tasty Blue Donut" percentage={25}/>
-					<DonutPercentage color={Styles.pink} name="Tasty Watermelon" percentage={25}/>
-					<DonutPercentage color={Styles.salmon} name="Tasty Sushi" percentage={25}/>
-					<DonutPercentage color={Styles.yellow} name="Tasty Cupcake" percentage={25}/>
+					<DonutPercentage color={Styles.blue} name="Tasty Blue Donut" percentage={30}/>
+					<DonutPercentage color={Styles.pink} name="Tasty Watermelon" percentage={20}/>
+					<DonutPercentage color={Styles.salmon} name="Tasty Sushi" percentage={15}/>
+					<DonutPercentage color={Styles.orange} name="Tasty Orange" percentage={15}/>
+					<DonutPercentage color={Styles.yellow} name="Tasty Cupcake" percentage={10}/>
+					<DonutPercentage color={Styles.green} name="Tasty Apple" percentage={10}/>
 				</DonutChart>
 			</Content>
 		</Container>
